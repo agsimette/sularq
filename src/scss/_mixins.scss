@@ -1,0 +1,29 @@
+@mixin tabletView {
+    @media (min-width: 540px) {
+        @content;
+    }
+}
+
+@mixin tabletView-grande {
+    @media (min-width: 768px) {
+        @content;
+    }
+}
+
+@mixin desktopView {
+    @media (min-width: 1025px){
+        @content;
+    }
+}
+
+@mixin desktopView-grande {
+    @media (min-width: 1440px) {
+        @content;
+    }
+}
+
+@mixin flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

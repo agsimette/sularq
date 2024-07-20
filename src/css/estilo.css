@@ -1,0 +1,207 @@
+@font-face {
+  font-family: "EB Garamond";
+  src: url("../assets/fontes/eb-garamond/EBGaramond-VariableFont_wght.ttf"), format("trueType");
+  font-weight: normal;
+  font-style: normal;
+}
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "EB Garamond";
+  color: #7e3a18;
+}
+@media (min-width: 540px) {
+  * {
+    font-size: 1.1rem;
+  }
+}
+@media (min-width: 1025px) {
+  * {
+    font-size: 1rem;
+  }
+}
+@media (min-width: 1440px) {
+  * {
+    font-size: 1.1rem;
+  }
+}
+
+body {
+  background-color: #e6dabc;
+  padding: 0.5rem;
+  overflow-x: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+body #interface {
+  background-color: white;
+  padding: 0.5rem;
+  border-radius: 1rem;
+  position: relative;
+}
+body #interface ul {
+  list-style-type: none;
+}
+body #interface header {
+  background-color: #37230f;
+  width: calc(100% + 1rem);
+  margin-left: -0.5rem;
+  margin-top: -0.5rem;
+  border-radius: 1rem 1rem 0 0rem;
+  text-align: center;
+  padding-bottom: 0.5rem;
+}
+body #interface header p {
+  color: white;
+}
+body #interface header #nomeEmpresa {
+  display: grid;
+  grid-template-rows: auto auto;
+  grid-template-columns: max-content;
+  justify-content: center;
+  padding: 0.5rem;
+}
+body #interface header #nomeEmpresa h1, body #interface header #nomeEmpresa h2 {
+  color: white;
+  font-weight: 400;
+}
+body #interface header #nomeEmpresa h2 {
+  justify-self: end;
+}
+@media (min-width: 540px) {
+  body #interface header #nomeEmpresa h1 {
+    font-size: 4.5rem;
+  }
+  body #interface header #nomeEmpresa h2 {
+    font-size: 1.5rem;
+  }
+}
+@media (min-width: 768px) {
+  body #interface header #nomeEmpresa h1 {
+    font-size: 3rem;
+  }
+  body #interface header #nomeEmpresa h2 {
+    font-size: 2.5rem;
+  }
+}
+@media (min-width: 1025px) {
+  body #interface header {
+    width: calc(100% + 2rem);
+    margin-left: -1rem;
+    margin-top: -1rem;
+  }
+  body #interface header #nomeEmpresa h1 {
+    font-size: 4.5rem;
+  }
+  body #interface header #nomeEmpresa h2 {
+    font-size: 1.5rem;
+  }
+}
+body #interface main p {
+  text-align: center;
+  margin: 1rem 0 1rem 0;
+}
+body #interface main #trabalhos ul {
+  text-align: center;
+}
+body #interface main #trabalhos ul .liProduto-imgProduto {
+  width: 18rem;
+  box-shadow: 0.1rem 0.1rem 0.5rem #7e3a18;
+  margin-bottom: 0.5rem;
+  border-radius: 1rem;
+}
+@media (min-width: 540px) {
+  body #interface main #trabalhos ul .liProduto-imgProduto {
+    width: 27rem;
+  }
+}
+@media (min-width: 768px) {
+  body #interface main #trabalhos ul {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(20rem, 1fr));
+    grid-gap: 1rem;
+  }
+  body #interface main #trabalhos ul .liProduto-imgProduto {
+    width: 20rem;
+  }
+}
+@media (min-width: 1025px) {
+  body #interface main #trabalhos {
+    margin: 2rem 0 2rem;
+  }
+  body #interface main #trabalhos ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    justify-content: space-around;
+  }
+  body #interface main #trabalhos ul .liProduto-imgProduto {
+    width: 13rem;
+  }
+}
+@media (min-width: 1440px) {
+  body #interface main #introEmpresa {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  body #interface main #introEmpresa p {
+    width: 70rem;
+  }
+  body #interface main #trabalhos ul .liProduto-imgProduto {
+    width: 15rem;
+  }
+}
+body #interface footer {
+  background-color: #37230f;
+  width: calc(100% + 1rem);
+  margin: 1rem 0 -0.5rem -0.5rem;
+  border-radius: 0 0 1rem 1rem;
+  padding: 1rem;
+}
+body #interface footer h3 {
+  color: white;
+  margin-bottom: 1rem;
+}
+body #interface footer p {
+  color: white;
+}
+body #interface footer p img {
+  margin-right: 0.5rem;
+}
+body #interface footer .marginBottom {
+  margin-bottom: 0.5rem;
+}
+@media (min-width: 768px) {
+  body #interface footer {
+    text-align: center;
+  }
+  body #interface footer ul {
+    display: flex;
+    justify-content: space-around;
+  }
+}
+@media (min-width: 1025px) {
+  body #interface footer {
+    width: calc(100% + 2rem);
+    margin: 0rem 0 -1rem -1rem;
+    border-radius: 0 0 1rem 1rem;
+  }
+  body #interface footer h3 {
+    font-size: 1.2rem;
+  }
+}
+@media (min-width: 1025px) {
+  body #interface {
+    width: 1124px;
+    padding: 1rem;
+  }
+}
+@media (min-width: 1440px) {
+  body #interface {
+    width: 80rem;
+  }
+}/*# sourceMappingURL=estilo.css.map */

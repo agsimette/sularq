@@ -1,0 +1,259 @@
+@use 'mixins';
+@use 'variables';
+
+@font-face {
+    font-family: 'EB Garamond';
+    src: url('../assets/fontes/eb-garamond/EBGaramond-VariableFont_wght.ttf'), format('trueType');
+    font-weight: normal;
+    font-style: normal;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'EB Garamond';
+    color: variables.$marrom-claro;
+
+    @include mixins.tabletView {
+        font-size: 1.1rem;
+    }
+
+    @include mixins.desktopView {
+        font-size: 1rem;
+    }
+
+    @include mixins.desktopView-grande {
+        font-size: 1.1rem;
+    }
+}
+
+body {
+    background-color: variables.$bege;
+    padding: .5rem;
+    overflow-x: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+
+    #interface {
+        background-color: white;
+        padding: .5rem;
+        border-radius: 1rem;
+        position: relative;
+
+        ul {
+            list-style-type: none;
+        }
+
+        header {
+            background-color: variables.$marrom-escuro;
+            width: calc(100% + 1rem);
+            margin-left: -.5rem;
+            margin-top: -.5rem;
+            border-radius: 1rem 1rem 0 0rem;
+            text-align: center;
+            padding-bottom: .5rem;
+
+            p {
+                color: white;
+            }
+
+            #nomeEmpresa {
+                display: grid;
+                grid-template-rows: auto auto;
+                grid-template-columns: max-content;
+                justify-content: center;
+                padding: .5rem;
+
+                h1, h2 {
+                    color: white;
+                    font-weight: 400;
+                }
+
+                h2 {
+                    justify-self: end;
+                }
+            }
+
+            @include mixins.tabletView {
+                #nomeEmpresa {
+                    h1 {
+                        font-size: 2rem;
+                    }
+
+                    h2 {
+                        font-size: 1.5rem;
+                    }
+                }
+            }
+
+            @include mixins.tabletView-grande {
+                #nomeEmpresa {
+                    h1 {
+                        font-size: 3rem;
+                    }
+
+                    h2 {
+                        font-size: 2.5rem;
+                    }
+                }
+            }
+
+            @include mixins.desktopView {
+                width: calc(100% + 2rem);
+                margin-left: -1rem;
+                margin-top: -1rem;
+
+                #nomeEmpresa {
+                    h1 {
+                        font-size: 2rem;
+                    }
+                    h2 {
+                        font-size: 1.5rem;
+                    }
+                }
+            }
+        }
+
+        main {
+            p {
+                text-align: center;
+                margin: 1rem 0 1rem 0;
+            }
+
+            #trabalhos {
+                ul {
+                    text-align: center;
+
+                    .liProduto {
+                        &-imgProduto {
+                            width: 18rem;
+                            box-shadow: .1rem .1rem .5rem variables.$marrom-claro;
+                            margin-bottom: .5rem;
+                            border-radius: 1rem;
+                        }
+                    }
+                }
+            }
+
+            @include mixins.tabletView {
+                #trabalhos {
+                    ul {
+                        .liProduto {
+                            &-imgProduto {
+                                width: 27rem;
+                            }
+                        }
+                    }
+                }
+            }
+
+            @include mixins.tabletView-grande {
+                #trabalhos {
+                    ul {
+                        display: grid;
+                        grid-template-columns: repeat(2, minmax(20rem, 1fr));
+                        grid-gap: 1rem;
+
+                        .liProduto {
+                            &-imgProduto {
+                                width: 20rem;
+                            }
+                        }
+                    }
+                }
+            }
+            
+            @include mixins.desktopView {
+                #trabalhos {
+                    margin: 2rem 0 2rem;
+                    ul {
+                        @include mixins.flex-center;
+                        justify-content: space-around;
+
+                        .liProduto {
+                            &-imgProduto {
+                                width: 13rem;
+                            }	
+                        }
+                    }
+                }
+            }
+
+            @include mixins.desktopView-grande {
+                #introEmpresa {
+                    @include mixins.flex-center;
+
+                    p {
+                        width: 70rem;
+                    }
+                }
+
+                #trabalhos  {
+                    ul {
+                        .liProduto {
+                            &-imgProduto {
+                                width: 15rem;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        footer {
+            background-color: variables.$marrom-escuro;
+            width: calc(100% + 1rem);
+            margin: 1rem 0 -.5rem -.5rem;
+            border-radius: 0 0 1rem 1rem;
+            padding: 1rem;
+            
+            h3 {
+                color: white;
+                margin-bottom: 1rem;
+            }
+
+            p {
+                color: white;
+            
+                img {
+                    margin-right: .5rem;
+                }
+            }
+
+            .marginBottom {
+                margin-bottom: .5rem;
+            }
+
+            @include mixins.tabletView-grande {
+                text-align: center;
+
+                ul {
+                    display: flex;
+                    justify-content: space-around;
+                }
+            }
+
+            @include mixins.desktopView {
+                width: calc(100% + 2rem);
+                margin: 0rem 0 -1rem -1rem;
+                border-radius: 0 0 1rem 1rem;
+
+                h3 {
+                    font-size: 1.2rem;
+                }
+            }
+        }
+
+        @include mixins.desktopView {
+            width: 1124px;
+            padding: 1rem;
+        }
+
+        @include mixins.desktopView-grande {
+            width: 80rem;
+        }
+    }
+}
